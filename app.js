@@ -33,8 +33,8 @@ const main = async () => {
 	app.use("/user", userRoute);
 
 	app.use((req, res) => {
-		console.log("hello");
-		res.send("404");
+		res.setHeader("content-type", "text/html");
+		res.sendFile(path.join(__dirname, "public", "index.html"));
 	});
 
 	app.use((err, req, res, next) => {
