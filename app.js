@@ -13,7 +13,7 @@ const main = async () => {
 
 	const PORT = process.env.PORT || 3000;
 
-	await connectDB();
+	// await connectDB();
 
 	var app = express();
 	app.use(express.static("public"));
